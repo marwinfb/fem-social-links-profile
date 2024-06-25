@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/assets/fonts/Inter.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --color-primary-green: hsl(75, 94%, 57%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-grey: hsl(0, 0%, 20%);
+  --color-neutral-dark-grey: hsl(0, 0%, 12%);
+  --color-neutral-off-black: hsl(0, 0%, 8%);
+
+  --font-primary: "Inter", sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--color-neutral-off-black);
+  color: var(--color-neutral-white);
+  font: 400 0.875rem/1.6 var(--font-primary);
+  min-height: 100vh;
+  padding: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--color-neutral-dark-grey);
+  border-radius: 0.75rem;
+  padding: 2.5rem;
+}
+
+.card__socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile__info {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.profile__image {
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.profile__name {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.profile__location {
+  color: var(--color-primary-green);
+  display: block;
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-regular);
+  margin: 0 0 1.25rem 0;
+}
+
+.card__socials {
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.social__link:link,
+.social__link:visited {
+  background-color: var(--color-neutral-grey);
+  border-radius: 8px;
+  font-weight: var(--font-weight-medium);
+  display: block;
+  padding: 0.75rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.social__link:hover,
+.social__link:active {
+  background-color: var(--color-primary-green);
+  color: var(--color-neutral-dark-grey);
+}
